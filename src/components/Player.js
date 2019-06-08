@@ -2,6 +2,8 @@ import React from 'react';
 import Counter from "./Counter";
 import PropTypes from 'prop-types';
 
+import styles from '../pages/scoreboard/Scoreboard.module.css';
+
 export class Player extends React.Component {
   static propTypes = {
     removePlayer: PropTypes.func,
@@ -16,12 +18,12 @@ export class Player extends React.Component {
     const {removePlayer, id, name, score, changeScore} = this.props;
 
     return (
-      <div className='player'>
-    <span className='player-name'>
-      <button className='remove-player'
+      <div className={styles.player}>
+    <span className={styles["player-name"]}>
+      <button className={styles["remove-player"]}
               onClick={() => removePlayer(id)}>x</button>
     </span>
-        <span className='player-name'>{name}</span>
+        <span className={styles["player-name"]}>{name}</span>
         <Counter score={score} id={id} changeScore={changeScore}/>
       </div>
     );
