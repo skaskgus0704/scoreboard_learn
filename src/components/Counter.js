@@ -11,7 +11,7 @@ const Counter = ({changeScore, score, id}) => (
     <button className={classNames(styles["counter-action"], styles.decrement)}
             onClick={() => changeScore(id, -1)}> -
     </button>
-    <span className={styles["counter-action"]}>{score}</span>
+    <span className={styles["counter-score"]}>{score}</span>
     <button className={classNames(styles["counter-action"], styles.increment)}
             onClick={() => changeScore(id, 1)}> +
     </button>
