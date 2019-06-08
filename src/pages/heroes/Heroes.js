@@ -1,5 +1,6 @@
 import React from 'react';
-import axios from 'axios';
+import axios from 'axios/index';
+import './Heroes.scss';
 
 export class Heroes extends React.Component {
   constructor(props) {
@@ -23,7 +24,7 @@ export class Heroes extends React.Component {
 
   render() {
     return (
-      <ul>
+      <ul className="img-box">
         {this.state.heroes.map(hero => (
           <li key={hero.hero_id} className="row align-items-center m-0">
             <div className="col-1 py-2">
